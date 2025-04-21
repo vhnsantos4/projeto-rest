@@ -10,6 +10,14 @@ jobs:
             - name: Clonar o repositório
               uses: actions/checkout@v4
 
+            - name: Build do React
+              run: |
+               npm install
+               npm run build
+
+            - name: Build do Docker
+              run: docker build -t projeto .
+
             - name: Simulando CD
               uses: actions/upload-artifact@v4  
               with:
@@ -20,8 +28,13 @@ jobs:
         runs-on: ubuntu-latest
         needs: deliver
         steps:
-            - uses: actions/download-artifact@v4
-              with:
-                name: projeto.zip
-            - name: Display structure of downloaded files
-              run: ls -R
+          - name: Download do artefato
+            uses: actions/download-artifact@v4
+            with:
+             name: projeto-docker
+  
+          - name: Verificar Dockerfile e arquivos
+            run: ls -R
+  
+          - name: Simulando deploy com Docker
+            run: echo "Deploy com Docker pronto para usar em produção!"
