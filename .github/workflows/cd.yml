@@ -25,5 +25,3 @@ jobs:
                 name: projeto.zip
             - name: Display structure of downloaded files
               run: ls -R
-
-            
