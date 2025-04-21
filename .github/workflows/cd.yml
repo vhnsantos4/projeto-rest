@@ -31,7 +31,7 @@ jobs:
           - name: Download do artefato
             uses: actions/download-artifact@v4
             with:
-             name: projeto-docker
+             name: projeto.zip
   
           - name: Verificar Dockerfile e arquivos
             run: ls -R
