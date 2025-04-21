@@ -1,40 +1,38 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 80px;
-  height: 100vh;
-  margin: 0;
-  background-color: #fff;
-}
-
 .container {
-  text-align: left;
+  width: 300px;
+  margin: 100px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial,sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 
 .titulo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .input {
   display: block;
-  width: 250px;
-  padding: 6px;
+  width: 94%;
   margin-bottom: 10px;
-  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .botao {
-  padding: 6px 12px;
-  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+
 }
 
 .mensagem {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: normal;
+  margin-top: 15px;
+  font-weight: bold;
 }
