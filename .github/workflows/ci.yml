@@ -1,0 +1,26 @@
+name: React CI
+
+on:
+    push:
+        branches: [main , ci-cd]
+    pull_request: 
+        branches: [main , ci-cd]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Clonar o repositório
+                uses: actions/checkout@v4
+            
+            - name: 🟢 Configurar Node.js
+                uses: actions/setup-node@v4
+                with:
+                    node-version: 18
+            
+            - name: Instalar dependências
+                run: npm install
+        
+            - name: Build do projeto
+                run: npm run build
