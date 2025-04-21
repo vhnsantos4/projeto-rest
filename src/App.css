@@ -28,9 +28,11 @@ body {
 }
 
 .botao {
-  padding: 6px 12px;
+  padding: 6px;
+  width: 266px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #4b94f3;
 }
 
 .mensagem {
